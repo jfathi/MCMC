@@ -92,10 +92,8 @@ def main():
     global Probabilties
     Probabilties = list(reader(open(PROBABILITY_FILE,"r")))
 
-    num_experiments = NUM_RUNS * EXPERIMENTS_PER_RUN
-
     state = state_gen()
-
+    num_experiments = NUM_RUNS * EXPERIMENTS_PER_RUN
     
     for i in range(num_experiments):
 
@@ -119,5 +117,5 @@ def main():
         state = probability_flip(state, COU_NAU_COL, COU_NAU_BIT)
 
         if (i % VAL_CHECK == 0):
-            print(f'Probability of COVID given Fever, Fever&Nausea, i={i}: {COVID_Counter/i}')
+            print(f'Probability of COVID given Nausea, Fever&Nausea, i={i}: {COVID_Counter/i}')
 main()
