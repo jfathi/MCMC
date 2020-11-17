@@ -1,7 +1,10 @@
 from csv import reader
 from random import random, randint
 
+#File from which our probabilities have been calculated ahead of time
+PROBABILITY_FILE = 'Probability_Chart.csv'
 Probabilties = []
+
 # These are binary values
 COVID_BIT = 64
 FEVER_BIT = 32
@@ -18,7 +21,7 @@ COVID_Counter = 0                                    # t = 0
 Fever_Counter = Cough_Counter = Nausea_Counter = 0   # t = 1
 FevNau_Counter = FevCou_Counter = CouNau_Counter = 0 # t = 2
 
-PROBABILITY_FILE = 'Probability_Chart.csv'
+
 COVID_COL = 2
 FEVER_COL = 3
 COUGH_COL = 4
