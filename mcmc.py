@@ -2,7 +2,7 @@ from csv import reader
 from random import random, randint
 
 Probabilties = []
-
+# These are binary values
 COVID_BIT = 64
 FEVER_BIT = 32
 COUGH_BIT = 16
@@ -43,7 +43,7 @@ def flip_var(state,req_var):
     else:
         state -= req_var
     return state
-
+# produce an iteration upon the current state across one Epoch.
 def iterate_counters(state):
     
     if (state & COVID_BIT == COVID_BIT):
