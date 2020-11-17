@@ -108,10 +108,12 @@ def main():
         # Time, t = 0
         state = probability_flip(state, COVID_COL, COVID_BIT)
         # Time, t = 1
+        # state = probability_flip(state, FEVER_COL, FEVER_BIT) | probability_flip(state, COUGH_COL, COUGH_BIT) | probability_flip(state, NAUSEA_COL, NAUSEA_BIT)
         state = probability_flip(state, FEVER_COL, FEVER_BIT)
         state = probability_flip(state, COUGH_COL, COUGH_BIT)
         state = probability_flip(state, NAUSEA_COL, NAUSEA_BIT)
         # Time, t = 2
+        # state = probability_flip(state, FEV_COU_COL, FEV_COU_BIT) | probability_flip(state, FEV_NAU_COL, FEV_NAU_BIT) | probability_flip(state, COU_NAU_COL, COU_NAU_BIT)
         state = probability_flip(state, FEV_COU_COL, FEV_COU_BIT)
         state = probability_flip(state, FEV_NAU_COL, FEV_NAU_BIT)
         state = probability_flip(state, COU_NAU_COL, COU_NAU_BIT)
