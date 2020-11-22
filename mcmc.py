@@ -39,7 +39,7 @@ def state_gen():
 def flip_var(state,req_var):
     '''
     Given a state (bit-string/integer) a relevant bit is flipped 
-    either or True or False (0/1)
+    to be either True or False (0/1), depending on its previous value.
     '''
     if (state & req_var != req_var):
         state += req_var
